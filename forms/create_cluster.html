@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>COMPOZED - ISAM | DEPLOY ISAM PACKAGES</title>
+  <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="../node_modules/bootstrap/dist/css/bootstrap-theme.css">
+  <link rel="stylesheet" type="text/css" href="../css/style.css">
+
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 bg-primary">
+          <div class="header1">
+              <h3>COMPOZED - ISAM</h3>
+          </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12 header2">
+          <p><h5><span class="glyphicon glyphicon-arrow-right icon-size"></span> ISAM DEPLOYMENT | GET SERVER STATS | SERVER RE-STATS</h5></p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <a href="../index.html" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <ul>
+            <a href="#"><li>Create Cluster</li></a>
+          </ul>
+          <form>
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Primary Master</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="primary_master">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Secondary Master</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="secondary_master">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Master Ere</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="master_ere">
+                </div>
+            </div>
+
+            <!-- <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Tertiary master</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="tertiary_master">
+                </div>
+            </div> -->
+
+            <!-- <div class="form-group row">
+                <label class="col-sm-2 col-form-label">Quaternary master</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="quaternary_master">
+                </div>
+            </div> -->
+
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">DSC External Clients</label>
+                <div class="col-sm-10">
+
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="dsc_external_clients" id="dsc_external_clients" value="true"> Yes
+                    </label>
+
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="dsc_external_clients" id="dsc_external_clients" value="false"> No
+                    </label>
+
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">DSC Port</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="dsc_port">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">DSC Use SSL</label>
+                <div class="col-sm-10">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="dsc_use_ssl" id="dsc_use_ssl" value="true"> Yes
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="dsc_use_ssl" id="dsc_use_ssl" value="false"> No
+                    </label>
+                </div>
+            </div>
+
+            <!-- <div class="form-group row">
+                <label class="col-sm-2 col-form-label">DSC SSL label</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="dsc_ssl_label">
+                </div>
+            </div> -->
+
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">DSC Worker Threads</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="dsc_worker_threads">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">DSC Maximum Session lifetime</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="dsc_maximum_session_lifetime">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">DSC Client Grace period</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="dsc_client_grace_period">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">HVDB Embedded</label>
+                <div class="col-sm-10">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="hvdb_embedded" id="hvdb_embedded" value="true"> Yes
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="hvdb_embedded" id="hvdb_embedded" value="false"> No
+                    </label>
+                </div>
+            </div>
+            <!--
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">HVDB max size</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="hvdb_max_size">
+                </div>
+            </div> -->
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">HVDB Type</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="hvdb_type">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">HVDB Address</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="hvdb_address">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">HVDB Port</label>
+                <div class="col-sm-10">
+                    <input type="number" class="form-control" id="hvdb_port">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">HVDB User</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="hvdb_user">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">HVDB Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="hvdb_password">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">HVDB DB Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="hvdb_db_name">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">HVDB DB Secure</label>
+                <div class="col-sm-10">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="hvdb_db_secure" id="hvdb_db_secure" value="true"> Yes
+                    </label>
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="hvdb_db_secure" id="hvdb_db_secure" value="false"> No
+                    </label>
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">HVDB Driver Type</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="hvdb_driver_type">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-2 col-form-label">First Port</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="first_port">
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+
+
+          </form>
+
+      </div>
+
+      <div class="col-md-2"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
+          <a href="../index.html" class="btn btn-info btn-sm"><span class="glyphicon glyphicon-arrow-left"></span> Back</a>
+      </div>
+      <div class="col-md-2"></div>
+    </div>
+
+  </div>
+</body>
+</html>

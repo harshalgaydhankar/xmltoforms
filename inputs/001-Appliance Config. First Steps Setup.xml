@@ -1,0 +1,34 @@
+<?xml version = "1.0" encoding ="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="RAPI.xsl"?>
+<application><doc>Completing the First Steps Setup</doc>
+<resources base="">
+<resource path="https://{appliance_hostname}/setup_complete">
+<param type="path" name="appliance_hostname">
+<doc>Host name of the appliance.</doc>
+</param>
+<method name="PUT" id="Completing the First Steps Setup"><doc> The first steps setup contains system level web services and configuration that must be completed before using the appliance. </doc>
+<doc> At a minimum, the following configuration web services must be used during the first-steps. These cannot be configured at any other time. </doc>
+<doc> &#009;&#8226; First Steps > Service Agreements </doc>
+<doc> &#009;&#8226; First Steps > FIPS Configuration (if applicable) </doc>
+<doc> </doc>
+<doc> The following can also optionally be configured during the first-steps, or at any other time. </doc>
+<doc> &#009;&#8226; Manage: System Settings > Updates and Licensing > Licenses </doc>
+<doc> &#009;&#8226; Manage: System Settings > System Settings > Snapshots </doc>
+<doc> &#009;&#8226; Manage: System Settings > System Settings > Administrator Settings </doc>
+<doc> &#009;&#8226; Manage: System Settings > Network Settings > Management Interfaces </doc>
+<doc> &#009;&#8226; Manage: System Settings > Network Settings > Application Interfaces </doc>
+<doc> &#009;&#8226; Manage: System Settings > System Settings > Date/Time </doc>
+<doc> </doc>
+<doc> When the first steps setup has been completed, the configuration can be applied using the Completing First Steps Setup web service. Once this web service completes successfully, the appliance is configured and ready to use. </doc>
+<doc> </doc>
+<doc> To complete the First Steps Setup process, issue a PUT request to the setup complete endpoint. </doc>
+<request>
+<doc>PUT https://{appliance_hostname}/setup_complete</doc><param name="Accept" style="header">
+<doc>application/json </doc></param>
+</request>
+<response status="200">
+<doc>Success</doc>
+</response></method>
+</resource>
+</resources>
+</application>
