@@ -1,0 +1,29 @@
+.header1{
+  margin-top: 25px;
+  margin-bottom: 10px;
+  padding-left: 18%;
+  color: white;
+
+}
+.header2{
+  background-color: purple;
+  padding-left: 18%;
+  margin-bottom: 15px;
+  padding-top: 10px;
+  color : white;
+  background: linear-gradient(to right, purple 0%,#2989d8 100%,#207cca 71%,#7db9e8 100%);
+}
+.icon-size{
+  font-size : 1.5em;
+}
+ol {
+  list-style-type: none;
+  list-style: decimal inside;
+  margin: 5px;
+  padding: 5px;
+}
+
+li {
+  font: 200 16px/1.5 Helvetica, Verdana, sans-serif;
+  margin-bottom: 10px;
+}
